@@ -3,6 +3,7 @@
     <style name="Theme.Light" parent="Holo.Theme.Light">
         <item name="actionBarStyle">@style/Theme.Light.ActionBar</item>
         <item name="spinnerDropDownItemStyle">@style/Theme.Light.ActionBar.SpinnerItem</item>
+        <item name="spinnerItemStyle">@style/Theme.Light.ActionBar.DropDownSpinner</item>
     </style>
 
     <style name="Theme.Light.ActionBar" parent="@style/Widget.Sherlock.Light.ActionBar">
@@ -14,6 +15,10 @@
         <item name="android:textColor">@color/textColour</item>
     </style>
 
+    <style name="Theme.Light.ActionBar.DropDownSpinner" parent="@style/Widget.Sherlock.TextView.SpinnerItem">
+       <item name="android:textColor">@color/textColour</item>
+    </style>
+    
    <style name="Theme.Light.ActionBar.SpinnerItem" parent="Widget.Sherlock.Light.DropDownItem.Spinner">
        <item name="android:textColor">@color/textColour</item>
     </style>
