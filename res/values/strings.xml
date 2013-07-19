@@ -1,5 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">HoloTestApp</string>
+    <string name="app_name">Holo Test App</string>
+    
+    <string name="title_activity_main">Main</string>
+    <string name="title_activity_back">Back</string>
+    
+    <string name="action_settings">Settings</string>
+    <string name="action_option1">Menu 1</string>
+    <string name="action_option2">Menu 2</string>
+    <string name="action_option3">Menu 3</string>
+    
+    <string name="action_back">Back</string>
+    
+    <string name="action_item1">Item 1</string>
+    <string name="action_item2">Item 2</string>
 
 </resources>

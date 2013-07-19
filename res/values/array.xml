@@ -1,0 +1,7 @@
+<resources>
+    <string-array name="action_list">
+        <item>@string/action_option1</item>
+        <item>@string/action_option2</item>
+        <item>@string/action_option3</item>
+    </string-array>
+</resources>
