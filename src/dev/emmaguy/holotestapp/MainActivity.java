@@ -35,7 +35,6 @@ public class MainActivity extends Activity implements OnNavigationListener {
 
     @Override
     public boolean onNavigationItemSelected(int itemPosition, long itemId) {
-
 	return false;
     }
 

@@ -15,8 +15,7 @@
         android:theme="@style/Theme.Light"
         android:name="org.holoeverywhere.app.Application">
         <activity
-            android:name="dev.emmaguy.holotestapp.MainActivity"
-            android:label="@string/title_activity_main" >
+            android:name="dev.emmaguy.holotestapp.MainActivity">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER" />
 

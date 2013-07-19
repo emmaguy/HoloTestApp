@@ -1,5 +1,21 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="Theme.Light" parent="Holo.Theme.Light"></style>
+    <style name="Theme.Light" parent="Holo.Theme.Light">
+        <item name="actionBarStyle">@style/Theme.Light.ActionBar</item>
+        <item name="spinnerDropDownItemStyle">@style/Theme.Light.ActionBar.SpinnerItem</item>
+    </style>
 
+    <style name="Theme.Light.ActionBar" parent="@style/Widget.Sherlock.ActionBar">
+        <item name="background">@color/backgroundColour</item>
+        <item name="titleTextStyle">@style/Theme.Light.ActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="Theme.Light.ActionBar.TitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/textColour</item>
+    </style>
+
+   <style name="Theme.Light.ActionBar.SpinnerItem" parent="Widget.Sherlock.Light.DropDownItem.Spinner">
+       <item name="android:textColor">@color/textColour</item>
+    </style>
+    
 </resources>

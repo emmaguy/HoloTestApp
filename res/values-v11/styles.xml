@@ -1,11 +1,13 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!--
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    -->
-    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
-        <!-- API 11 theme customizations can go here. -->
+    <style name="Theme.Light" parent="Holo.Theme.Light">
+        <item name="android:actionBarStyle">@style/Theme.Light.ActionBar</item>
+        <item name="android:spinnerDropDownItemStyle">@style/Theme.Light.ActionBar.SpinnerItem</item>
+    </style>
+
+    <style name="Theme.Light.ActionBar" parent="@style/Widget.Sherlock.ActionBar">
+        <item name="android:titleTextStyle">@style/Theme.Light.ActionBar.TitleTextStyle</item>
+        <item name="android:background">@color/backgroundColour</item>
     </style>
 
 </resources>
