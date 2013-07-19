@@ -9,6 +9,11 @@
     <style name="Theme.Light.ActionBar" parent="@style/Widget.Sherlock.ActionBar">
         <item name="android:titleTextStyle">@style/Theme.Light.ActionBar.TitleTextStyle</item>
         <item name="android:background">@color/backgroundColour</item>
+        <item name="android:selectableItemBackground">@color/backgroundColour</item>
+    </style>
+    
+    <style name="Theme.Light.ActionBar.SpinnerItem" parent="Widget.Sherlock.Light.DropDownItem.Spinner">
+       <item name="android:background">@color/backgroundColour</item>
     </style>
 
 </resources>

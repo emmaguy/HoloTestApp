@@ -21,6 +21,7 @@
     
    <style name="Theme.Light.ActionBar.SpinnerItem" parent="Widget.Sherlock.Light.DropDownItem.Spinner">
        <item name="android:textColor">@color/textColour</item>
+       <item name="background">@color/backgroundColour</item>
     </style>
     
 </resources>

@@ -15,5 +15,40 @@
         android:icon="@android:drawable/ic_menu_delete"
         android:showAsAction="ifRoom|withText"
         android:title="@string/action_item3"/>
+    <item
+        android:id="@+id/action_item4"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_item4"/>
+    <item
+        android:id="@+id/action_item5"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_item5"/>
+    <item
+        android:id="@+id/action_item6"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_item6"/>
+    <item
+        android:id="@+id/action_item7"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_item7"/>
+    <item
+        android:id="@+id/action_item8"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_item8"/>
+    <item
+        android:id="@+id/action_item9"
+        android:icon="@android:drawable/ic_menu_delete"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_item9"/>
+    <item
+        android:id="@+id/action_item10"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/action_item10"/>
 
 </menu>
