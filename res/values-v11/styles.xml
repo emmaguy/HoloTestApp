@@ -4,6 +4,7 @@
         <item name="android:actionBarStyle">@style/Theme.Light.ActionBar</item>
         <item name="android:spinnerDropDownItemStyle">@style/Theme.Light.ActionBar.SpinnerItem</item>
         <item name="android:spinnerItemStyle">@style/Theme.Light.ActionBar.DropDownSpinner</item>
+        <item name="android:popupMenuStyle">@style/Theme.Light.ActionBar.Popup</item>
     </style>
 
     <style name="Theme.Light.ActionBar" parent="@style/Widget.Sherlock.ActionBar">
@@ -14,6 +15,7 @@
     
     <style name="Theme.Light.ActionBar.SpinnerItem" parent="Widget.Sherlock.Light.DropDownItem.Spinner">
        <item name="android:background">@color/backgroundColour</item>
+       <item name="android:textColor">@color/textColour</item>
     </style>
-
+    
 </resources>
