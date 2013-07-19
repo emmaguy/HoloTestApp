@@ -1,11 +1,16 @@
 package dev.emmaguy.holotestapp;
 
+import java.lang.reflect.Field;
+
 import org.holoeverywhere.app.Activity;
 import org.holoeverywhere.widget.ArrayAdapter;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
-import android.widget.SpinnerAdapter;
+import android.view.KeyEvent;
+import android.view.ViewConfiguration;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.OnNavigationListener;
@@ -17,13 +22,26 @@ public class MainActivity extends Activity implements OnNavigationListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
+	// if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+	try {
+	    ViewConfiguration config = ViewConfiguration.get(this);
+	    Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+	    if (menuKeyField != null) {
+		menuKeyField.setAccessible(true);
+		menuKeyField.setBoolean(config, false);
+	    }
+	} catch (Exception ex) {
+	}
+	// }
+
 	setContentView(R.layout.activity_main);
 
-	SpinnerAdapter actionListSpinnerAdapter = ArrayAdapter.createFromResource(this, R.array.action_list,
-		android.R.layout.simple_spinner_dropdown_item);
+	Context context = getSupportActionBar().getThemedContext();
+	ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(context, R.array.action_list, R.layout.sherlock_spinner_item);
+	adapter.setDropDownViewResource(R.layout.sherlock_spinner_dropdown_item);
 
 	getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
-	getSupportActionBar().setListNavigationCallbacks(actionListSpinnerAdapter, this);
+	getSupportActionBar().setListNavigationCallbacks(adapter, this);
     }
 
     @Override
@@ -31,6 +49,17 @@ public class MainActivity extends Activity implements OnNavigationListener {
 	MenuInflater inflater = getSupportMenuInflater();
 	inflater.inflate(R.menu.main, menu);
 	return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+	if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
+	    if (event.getAction() == KeyEvent.ACTION_UP && keyCode == KeyEvent.KEYCODE_MENU) {
+		openOptionsMenu();
+		return true;
+	    }
+	}
+	return super.onKeyUp(keyCode, event);
     }
 
     @Override
@@ -50,7 +79,7 @@ public class MainActivity extends Activity implements OnNavigationListener {
 	default:
 	    return false;
 	}
-	
+
 	return true;
     }
 }
