@@ -22,26 +22,32 @@ public class MainActivity extends Activity implements OnNavigationListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
-	// if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-	try {
-	    ViewConfiguration config = ViewConfiguration.get(this);
-	    Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
-	    if (menuKeyField != null) {
-		menuKeyField.setAccessible(true);
-		menuKeyField.setBoolean(config, false);
-	    }
-	} catch (Exception ex) {
-	}
-	// }
+	
+	forceOverflowMenu();
 
 	setContentView(R.layout.activity_main);
 
 	Context context = getSupportActionBar().getThemedContext();
-	ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(context, R.array.action_list, R.layout.sherlock_spinner_item);
+	ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(context, R.array.action_list,
+		R.layout.sherlock_spinner_item);
 	adapter.setDropDownViewResource(R.layout.sherlock_spinner_dropdown_item);
 
 	getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
 	getSupportActionBar().setListNavigationCallbacks(adapter, this);
+    }
+
+    private void forceOverflowMenu() {
+	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+	    try {
+		ViewConfiguration config = ViewConfiguration.get(this);
+		Field menuKeyField = ViewConfiguration.class.getDeclaredField("sHasPermanentMenuKey");
+		if (menuKeyField != null) {
+		    menuKeyField.setAccessible(true);
+		    menuKeyField.setBoolean(config, false);
+		}
+	    } catch (Exception ex) {
+	    }
+	}
     }
 
     @Override
