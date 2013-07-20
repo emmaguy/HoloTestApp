@@ -5,17 +5,13 @@
         <item name="android:spinnerDropDownItemStyle">@style/Theme.Light.ActionBar.SpinnerItem</item>
         <item name="android:spinnerItemStyle">@style/Theme.Light.ActionBar.DropDownSpinner</item>
         <item name="android:popupMenuStyle">@style/Theme.Light.ActionBar.Popup</item>
+        <item name="android:actionMenuTextColor">@color/white_text_colour</item>
+        <item name="android:itemTextAppearance">@style/Theme.Light.PopupMenuTextStyle</item>
     </style>
 
     <style name="Theme.Light.ActionBar" parent="@style/Widget.Sherlock.ActionBar">
         <item name="android:titleTextStyle">@style/Theme.Light.ActionBar.TitleTextStyle</item>
-        <item name="android:background">@color/backgroundColour</item>
-        <item name="android:selectableItemBackground">@color/backgroundColour</item>
+        <item name="android:background">@color/blue_background_colour</item>
     </style>
-    
-    <style name="Theme.Light.ActionBar.SpinnerItem" parent="Widget.Sherlock.Light.DropDownItem.Spinner">
-       <item name="android:background">@color/backgroundColour</item>
-       <item name="android:textColor">@color/textColour</item>
-    </style>
-    
+
 </resources>
